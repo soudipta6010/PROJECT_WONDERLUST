@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-// const { schema } = require("./listing");
 const Schema = mongoose.Schema;
 
 //Declaring Schema for review
@@ -10,10 +9,13 @@ const reviewSchema = new Schema({
         min: 1,
         max: 5
     },
-    createdAt: {
-        type: Date,
-        default: Date.now()
-    }
+    // createdAt: {
+    //     type: Date,
+    //     default: Date.now()
+    // }
+
+}, {
+    timestamps: true
 });
 
 module.exports = mongoose.model("Review", reviewSchema)
